@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence, MotionConfig, useScroll, useSpring, useTransform, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, ArrowDown, Download, Monitor, Sun, Moon, Github, Linkedin, GraduationCap, Mail, Phone, MapPin, ArrowRight, Plus, Minus, Code2, Layers3, BrainCircuit, Cloud, AudioLines, Sparkles, Menu, X } from 'lucide-react';
 
+const assetPath = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 // All personal content and asset paths are editable here. Add verified URLs to enable links.
 export const portfolioData = {
   name: 'Vishal Durga', fullName: 'Vishal Durga DR', role: 'Senior Software Engineer',
   email: 'dev.vishaldurga@gmail.com', phone: '+91 9361473236', phoneHref: '+919361473236', location: 'Bengaluru, India',
-  portrait: '/vishal-durga.png', resume: '/vishal-durga-resume.pdf',
+  portrait: assetPath('/vishal-durga.png'), resume: assetPath('/vishal-durga-resume.pdf'),
   socials: { linkedin: 'https://www.linkedin.com/in/vishal-durga-dr-902369354/', github: 'https://github.com/dev-vishal-001', scaler: 'https://www.scaler.com/academy/profile' },
   experience: [
     {
